@@ -1,4 +1,4 @@
-!#/usr/bin/bash
+#!/usr/bin/bash
 
 yum install tomcat -y
 sed -i 's/port="8080"/port="8880"/' /etc/tomcat/server.xml
