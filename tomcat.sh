@@ -1,7 +1,5 @@
 #!/usr/bin/bash
 
-yum install tomcat -y
-sed -i 's/port="8080"/port="8880"/' /etc/tomcat/server.xml
-yum install tomcat-webapps tomcat-admin-webapps -y
-yum install tomcat-docs-webapp tomcat-javadoc -y
-systemctl start tomcat
+cd /home/jenkins
+wget https://rpmfind.net/linux/fedora/linux/updates/testing/27/x86_64/Packages/t/tomcat-8.0.53-1.fc27.noarch.rpm
+rpm -ivh tomcat-8.0*
